@@ -110,7 +110,7 @@ plot_hierarchical <- function(vsd, hc, k, sample_annotation_df, tcga_code) {
   return(p)
 }
 
-plot_genes_pca <- function(pca_res, vsd, meta_subset, pc) {
+plot_genes_pca <- function(explained_variance, pca_res, vsd, meta_subset, pc) {
   # plot the 6 genes with larger 
   pc_loadings <- pca_res$rotation[, pc]
   pc_sorted_loadings <- sort(pc_loadings, decreasing = TRUE)

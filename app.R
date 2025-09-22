@@ -230,7 +230,7 @@ server <- function(input, output) {
   })
   
   pca_genes_pc1_results <- reactive ({
-    plot_genes_pca(pca_res(), vsd(), meta_subset(), 1)
+    plot_genes_pca(explained_variance(), pca_res(), vsd(), meta_subset(), 1)
   })
   
   output$pca_genes_plot1 <- renderPlot({
@@ -238,7 +238,7 @@ server <- function(input, output) {
   })
   
   pca_genes_pc2_results <- reactive ({
-    plot_genes_pca(pca_res(), vsd(), meta_subset(), 2)
+    plot_genes_pca(explained_variance(), pca_res(), vsd(), meta_subset(), 2)
   })
   
   output$pca_genes_plot2 <- renderPlot({
@@ -266,7 +266,7 @@ server <- function(input, output) {
   })
   
   pca_genes_results <- reactive ({
-    plot_genes_pca(pca_res(), vsd(), meta_subset(), 1)
+    plot_genes_pca(explained_variance(), pca_res(), vsd(), meta_subset(), 1)
   })
   
   output$pca_genes_plot <- renderPlot({
