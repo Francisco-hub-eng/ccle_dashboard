@@ -44,7 +44,7 @@ ui <- fluidPage(
     div(align = "center",
       selectInput("organ",
                     "Select primary site:",
-                    choices = sort(unique(ccle_meta$Site_Primary)))
+                    choices = sort(unique(ccle_meta$Site_Primary[ccle_meta$Site_Primary != "missing_info"])))
         ),
     
     div(align = "center",
