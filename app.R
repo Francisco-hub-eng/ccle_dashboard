@@ -150,21 +150,21 @@ server <- function(input, output) {
     req(subsets())
     counts <- table(meta_subset()$Pathology)
     pie(counts, labels = names(counts), main = paste0("Pathology in "
-    , selected_organ, "\nprimary site"))
+    , input$organ, "\nprimary site"))
   })
   
   output$pie_2 <- renderPlot({
     req(subsets())
     counts <- table(meta_subset()$Gender)
     pie(counts, labels = names(counts), main = paste0("Gender in "
-                  , selected_organ, "\nprimary site"))
+                  , input$organ, "\nprimary site"))
   })
   
   output$pie_3 <- renderPlot({
     req(subsets())
     counts <- table(meta_subset()$tcga_code)
     pie(counts, labels = names(counts), main = paste0("TCGA code in "
-                    , selected_organ, "\nprimary site"))
+                    , input$organ, "\nprimary site"))
   })
   
   #results_dds <- reactive({
@@ -201,7 +201,8 @@ server <- function(input, output) {
   
   pca_results <- reactive({
     req(subsets())
-    pca_plots(1, 2, pca_res(), meta_subset(), hc(), k(), "Pathology")
+    pca_plots(explained_variance(), 1, 2, pca_res(), meta_subset(), hc(), 
+              k(), "Pathology")
   })
   
   output$pca_plot1 <- renderPlot({
@@ -211,7 +212,8 @@ server <- function(input, output) {
   
   pca_results2 <- reactive({
     req(subsets())
-    pca_plots(3, 4, pca_res(), meta_subset(), hc(), k(), "Pathology")
+    pca_plots(explained_variance(), 3, 4, pca_res(), meta_subset(), hc(), 
+              k(), "Pathology")
   })
   
   output$pca_plot2 <- renderPlot({
@@ -258,7 +260,8 @@ server <- function(input, output) {
   # clusters
   pca_results_cluster <- reactive({
     req(subsets())
-    pca_plots(1, 2, pca_res(), meta_subset(), hc(), k(), "Cluster")
+    pca_plots(explained_variance(), 1, 2, pca_res(), meta_subset(), hc(), 
+              k(), "Cluster")
   })
   
   output$pca_genes_plot_cluster <- renderPlot({

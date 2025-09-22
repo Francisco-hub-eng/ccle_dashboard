@@ -12,7 +12,8 @@ standard_theme <- function() {
 
 
 
-pca_plots <- function(nA, nB, pca_res, meta_subset, hc, k, color_var) {
+pca_plots <- function(explained_variance, nA, nB, pca_res, meta_subset, hc, 
+                      k, color_var) {
  
   # Create a data frame with PC1/PC2 and your sample metadata
   df_pca <- data.frame(
