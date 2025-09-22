@@ -160,7 +160,8 @@ plot_2fold <- function(res) {
 }
 
 # Plot 2fold genes
-plot_2fold_genes <-function(pca_res, res, vsd, top_genes, meta_subset) {
+plot_2fold_genes <-function(explained_variance, pca_res, res, vsd, top_genes, 
+                            meta_subset) {
   
   pc2_top_genes_vsd <- data.frame(t(assay(vsd)[top_genes, ]))
   

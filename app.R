@@ -306,7 +306,7 @@ server <- function(input, output) {
   # plot genes with more differential expression
   plot_2fold_genes_result <- reactive({
     req(top_genes_2fold_result())
-    plot_2fold_genes(pca_res(), res(), vsd(), 
+    plot_2fold_genes(explained_variance(), pca_res(), res(), vsd(), 
                      top_genes(), meta_subset())
   })
   
