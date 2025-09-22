@@ -37,7 +37,7 @@ This project provides a comprehensive analysis platform for cancer genomics data
 
 4. **Differential Expression Analysis**:
    - DESeq2-based analysis comparing expression between hierarchical clusters
-   - Multiple testing correction using Benjamini-Hochberg method
+   - Automatic FDR correction via DESeq2's built-in Benjamini-Hochberg method
    - Identification of significantly differentially expressed genes (padj < 0.001)
 
 ### Statistical Techniques Employed
@@ -46,7 +46,7 @@ This project provides a comprehensive analysis platform for cancer genomics data
 - **Hierarchical Clustering**: Complete linkage clustering for sample grouping
 - **Principal Component Analysis**: Linear dimensionality reduction for data visualization and exploration
 - **Differential Expression**: Negative binomial generalized linear models via DESeq2
-- **Multiple Testing Correction**: Benjamini-Hochberg procedure for FDR control
+- **Multiple Testing Correction**: Automatic Benjamini-Hochberg FDR adjustment through DESeq2's `results()` function
 
 ## AI Integration
 
