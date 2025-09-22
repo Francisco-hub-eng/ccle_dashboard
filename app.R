@@ -9,6 +9,19 @@
 
 library(shiny)
 library(DT)
+library(tidyr)
+library(dplyr)
+library(biomaRt)
+library(ggplot2)
+library(ggrepel)
+library(patchwork)
+library(scales)
+library(ComplexHeatmap)
+library(EnhancedVolcano)
+library(DESeq2)
+library(httr)
+library(jsonlite)
+library(rmarkdown)
 
 # source the function files
 source("functions/data_processing.R")
@@ -106,7 +119,8 @@ server <- function(input, output) {
   
   # create the subsets
   subsets <- eventReactive(list(input$organ, input$num_clusters), {
-    result <- filter_ccle_data_by_organ(input$organ, input$num_clusters)
+    result <- filter_ccle_data_by_organ(ccle_counts, ccle_meta, 
+                                        input$organ, input$num_clusters)
     return(result)
   })
 

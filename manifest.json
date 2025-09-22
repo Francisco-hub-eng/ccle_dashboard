@@ -3973,6 +3973,9 @@
     "data/Cell_lines_annotations_20181226.txt": {
       "checksum": "0aa74f0c6d59d798619cf08c373b8f50"
     },
+    "eda_offline.Rmd": {
+      "checksum": "a518a7e87f51b8702b3b15acbc0bbfbc"
+    },
     "keys_backup/1_prepare_data_keys.qmd": {
       "checksum": "35a15d188ffb6cdf54b00739ceadf81a"
     },
@@ -4061,7 +4064,7 @@
       "checksum": "20757121ab39a92dc754661d4a618b4f"
     },
     "tgca_genes/app.R": {
-      "checksum": "4061b6cf12835119c71847e6e9eeec72"
+      "checksum": "e3829be2d93e86db27359aa1572e1176"
     },
     "tgca_genes/data/1_ccle_counts.csv": {
       "checksum": "2c2e12b9999c040d11dc31bbe97488ef"
@@ -4070,7 +4073,7 @@
       "checksum": "d158d70c0f8af0bff9e3b88ee8eb34a9"
     },
     "tgca_genes/functions/data_processing.R": {
-      "checksum": "67fcc67dd28e411b326449ca26625311"
+      "checksum": "93cf1917c7e9faca15959f0b951a52e6"
     },
     "tgca_genes/functions/visualization.R": {
       "checksum": "b7e71c4992f83177ddf3dcc71e50f05f"

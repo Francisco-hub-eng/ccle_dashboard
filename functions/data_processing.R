@@ -156,7 +156,8 @@ create_sample_annotation_colors <- function(sample_annotation_df) {
 }
 
 
-filter_ccle_data_by_organ <- function(selected_organ = NULL, k = 2,
+filter_ccle_data_by_organ <- function(ccle_counts, ccle_meta, 
+                                      selected_organ = NULL, k = 2,
                                       verbose = FALSE) {
   
   print(selected_organ)
