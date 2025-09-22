@@ -3378,6 +3378,32 @@
         "Built": "R 4.4.0; ; 2025-07-04 04:14:35 UTC; unix"
       }
     },
+    "shinybusy": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "shinybusy",
+        "Title": "Busy Indicators and Notifications for 'Shiny' Applications",
+        "Version": "0.3.3",
+        "Authors@R": "c(person(\"Fanny\", \"Meyer\", role = \"aut\"),\n  person(\"Victor\", \"Perrier\", email = \"victor.perrier@dreamrs.fr\", role = c(\"aut\", \"cre\")),\n  person(\"Silex Technologies\", comment = \"https://www.silex-ip.com\", role = \"fnd\"))",
+        "Description": "Add indicators (spinner, progress bar, gif) in your 'shiny'\n  applications to show the user that the server is busy. And other tools to let\n  your users know something is happening (send notifications, reports, ...).",
+        "License": "GPL-3",
+        "Encoding": "UTF-8",
+        "Imports": "htmltools, shiny, jsonlite, htmlwidgets",
+        "RoxygenNote": "7.3.1",
+        "URL": "https://github.com/dreamRs/shinybusy,\nhttps://dreamrs.github.io/shinybusy/",
+        "BugReports": "https://github.com/dreamRs/shinybusy/issues",
+        "Suggests": "testthat, covr, knitr, rmarkdown",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-03-09 10:44:38 UTC; perri",
+        "Author": "Fanny Meyer [aut],\n  Victor Perrier [aut, cre],\n  Silex Technologies [fnd] (https://www.silex-ip.com)",
+        "Maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+        "Repository": "RSPM",
+        "Date/Publication": "2024-03-09 11:20:02 UTC",
+        "Built": "R 4.4.0; ; 2024-04-25 03:21:24 UTC; unix"
+      }
+    },
     "snow": {
       "Source": "CRAN",
       "Repository": "http://rspm/default/latest",
@@ -4064,7 +4090,7 @@
       "checksum": "20757121ab39a92dc754661d4a618b4f"
     },
     "tgca_genes/app.R": {
-      "checksum": "e3829be2d93e86db27359aa1572e1176"
+      "checksum": "cb4e8546659974a9780cdd01c9d74007"
     },
     "tgca_genes/data/1_ccle_counts.csv": {
       "checksum": "2c2e12b9999c040d11dc31bbe97488ef"
@@ -4076,7 +4102,7 @@
       "checksum": "93cf1917c7e9faca15959f0b951a52e6"
     },
     "tgca_genes/functions/visualization.R": {
-      "checksum": "b7e71c4992f83177ddf3dcc71e50f05f"
+      "checksum": "0c11e09e0cac20737955bc386ceb936a"
     }
   },
   "users": null

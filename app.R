@@ -22,6 +22,7 @@ library(DESeq2)
 library(httr)
 library(jsonlite)
 library(rmarkdown)
+library(shinybusy)
 
 # source the function files
 source("functions/data_processing.R")
@@ -33,7 +34,7 @@ ccle_meta <- read.csv("data/1_ccle_meta.csv")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-
+    
     # Application title
     div(align = "center",
       titlePanel("RNA-seq Cancer Genome Atlas Analysis"),
@@ -54,6 +55,13 @@ ui <- fluidPage(
                   value = 2,
                   step = 1),
       ),
+    
+    add_busy_spinner(
+      spin = "fading-circle",
+      position = "bottom-right",   # puts spinner centered below content
+      height = "200px",
+      width = "200px"
+    ),
     
     div(align = "center",
       tabPanel("Data Sampple",
@@ -88,7 +96,7 @@ ui <- fluidPage(
     div(align = "center",
       plotOutput("hierarchical_plot", height = "900px"),
       plotOutput("pca_genes_plot_cluster", height = "300px",
-                 width = "600px")
+                 width = "600px") 
     ),
     
     titlePanel("Differential Expression Analysis"),
